@@ -13,6 +13,9 @@ const config: Config = {
         poppins: ['"Poppins"', ...defaultTheme.fontFamily.sans],
         dmSans: ['"DM Sans"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        darkMode: '#191919',
+      },
     },
   },
   plugins: [],
