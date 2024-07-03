@@ -1,26 +1,47 @@
-import Link from 'next/link'
+'use client'
 import NavLink from './NavLink'
-import React from 'react'
+import { useState } from 'react'
 
 const Nav = () => {
+  const [select, setSelect] = useState<number>(0)
+
+  const handleClick = (item: number) => {
+    setSelect(item)
+  }
+
+  const nav = [
+    {
+      path: '/',
+      name: 'Home',
+    },
+    {
+      path: '/',
+      name: 'About',
+    },
+    {
+      path: '/',
+      name: 'Tech stack',
+    },
+    {
+      path: '/',
+      name: 'Projects',
+    },
+    {
+      path: '/',
+      name: 'Contact  ',
+    },
+  ]
+
   return (
     <nav>
-      <ul className="flex gap-8">
-        <li>
-          <NavLink href="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink href="/about">About</NavLink>
-        </li>
-        <li>
-          <NavLink href="/tech-stack">Tech Stack</NavLink>
-        </li>
-        <li>
-          <NavLink href="/projects">Projects</NavLink>
-        </li>
-        <li>
-          <NavLink href="/contact">Contact</NavLink>
-        </li>
+      <ul className="flex flex-col items-start md:flex-row gap-8">
+        {nav.map((link, index) => (
+          <li key={index}>
+            <NavLink index={index} href="/" select={select} onAction={handleClick}>
+              {link.name}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   )

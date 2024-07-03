@@ -22,7 +22,7 @@ const Hamburger = () => {
     <MotionConfig transition={{ duration: 0.3 }}>
       <motion.button
         initial={false}
-        className="h-14 w-14 rounded-full bg-white/0 md:hidden hover:bg-gray-600/20 relative flex flex-col justify-center items-center"
+        className="h-14 w-14 rounded-full bg-white/0 md:hidden hover:bg-gray-600/20 relative flex flex-col justify-center items-center z-20"
         animate={ctx.open ? 'open' : 'closed'}
         onClick={ctx.handleOpen}
       >

@@ -1,10 +1,10 @@
 import SocialMedia from './SocialMedia'
 import Nav from './Nav/Nav'
-import Hamburger from './Nav/Hamburger'
+import NavMobile from './Nav/NavMobile'
 import HamburgerProvider from '@/context/ContextHamburger'
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-8">
+    <header className="flex justify-between items-center p-8 md:py-8 md:px-0">
       <h1 className="text-4xl bg-gradient-to-r from-violet-500  to-fuchsia-500 inline-block text-transparent bg-clip-text">
         {'<dev/>'}
       </h1>
@@ -13,7 +13,7 @@ const Header = () => {
         <SocialMedia />
       </div>
       <HamburgerProvider>
-        <Hamburger />
+        <NavMobile />
       </HamburgerProvider>
     </header>
   )
