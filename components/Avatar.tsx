@@ -3,9 +3,16 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import profileIcon from '@/public/mnawara.png'
-const Avatar = () => {
+
+type AvatarProps = {
+  height?: number
+  width?: number
+}
+
+const Avatar = ({ height = 288, width = 288 }: AvatarProps) => {
+  let classes = { width: `${width}px`, height: `${height}px` }
   return (
-    <div className="relative w-72 h-72 overflow-hidden">
+    <div className="relative overflow-hidden" style={classes}>
       <motion.div
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}

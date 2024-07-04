@@ -1,8 +1,8 @@
+import About from '@/components/About/About'
 import Avatar from '@/components/Avatar'
 import CardList from '@/components/CardList/CardList'
 import TechStack from '@/components/TechStack/TechStack'
 import { dataTechStack } from '@/lib/data'
-import { motion, MotionConfig } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -24,6 +24,7 @@ export default function Home() {
       </header>
       <TechStack data={dataTechStack} title="Skills" />
       <CardList />
+      <About />
     </main>
   )
 }

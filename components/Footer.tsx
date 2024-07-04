@@ -13,7 +13,7 @@ const Footer = () => {
   console.log(status)
   return (
     <>
-      <footer className="flex gap-4 justify-center  py-8 ">
+      <footer className="flex gap-4 justify-center  py-8 mt-10">
         <SectionTransition>
           <div className="flex gap-4 flex-wrap justify-center">
             <Button href="https://www.linkedin.com/in/marcin-nawara/" target="_blink">
