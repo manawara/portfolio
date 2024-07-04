@@ -3,8 +3,10 @@ import Avatar from '@/components/Avatar'
 import CardList from '@/components/CardList/CardList'
 import TechStack from '@/components/TechStack/TechStack'
 import { dataTechStack } from '@/lib/data'
-
+import { generateQuote } from '@/lib/helper'
 export default function Home() {
+  const qoute = generateQuote()
+
   return (
     <main className="px-8">
       <header>
@@ -24,7 +26,7 @@ export default function Home() {
       </header>
       <TechStack data={dataTechStack} title="Skills" />
       <CardList />
-      <About />
+      <About qoute={qoute} />
     </main>
   )
 }
