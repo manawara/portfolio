@@ -7,18 +7,18 @@ import SectionTransition from '../SectionTransition'
 import Modal, { ModalHandle } from '../Modal'
 import QuoteComponent from '../QuoteComponent'
 
-const About = ({ qoute }: { qoute: string }) => {
+const About = ({ quote, id }: { quote: string; id: string }) => {
   const modalRef = useRef<ModalHandle>(null)
   const handleModalOpen = () => {
     modalRef.current?.open()
   }
   return (
     <SectionTransition>
-      <section>
+      <section id={id}>
         <h3 className="text-center text-3xl mb-4">About me</h3>
         <div className="flex flex-col-reverse sm:flex-row items-center my-8 gap-8">
           <div className="sm:max-w-[60%]">
-            <QuoteComponent quote={qoute} />
+            <QuoteComponent quote={quote} />
           </div>
           <div className="flex flex-col">
             <div className="flex justify-center sm:justify-start">

@@ -1,44 +1,18 @@
 'use client'
 import NavLink from './NavLink'
-import { useState } from 'react'
+import { useScrollToSection } from '@/hooks/useScrollToSection'
+import { sections, Section } from '@/app/page'
 
-const Nav = () => {
-  const [select, setSelect] = useState<number>(0)
-
-  const handleClick = (item: number) => {
-    setSelect(item)
-  }
-
-  const nav = [
-    {
-      path: '/',
-      name: 'Home',
-    },
-    {
-      path: '/',
-      name: 'About',
-    },
-    {
-      path: '/',
-      name: 'Tech stack',
-    },
-    {
-      path: '/',
-      name: 'Projects',
-    },
-    {
-      path: '/',
-      name: 'Contact  ',
-    },
-  ]
+const Nav: React.FC = () => {
+  const { scrollToSection } = useScrollToSection(sections)
 
   return (
     <nav>
       <ul className="flex flex-col items-start md:flex-row gap-8">
-        {nav.map((link, index) => (
+        {sections.map((section: Section, index: number) => (
           <li key={index}>
-            <NavLink index={index} href="/" select={select} onAction={handleClick}>
-              {link.name}
+            <NavLink index={index} href={`#${section.id}`} onAction={() => scrollToSection(index)}>
+              {section.label}
             </NavLink>
           </li>
         ))}

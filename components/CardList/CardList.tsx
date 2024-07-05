@@ -4,10 +4,10 @@ import React from 'react'
 import Card from './Card'
 import SectionTransition from '../SectionTransition'
 
-const CardList = () => {
+const CardList = ({ id }: { id: string }) => {
   return (
     <SectionTransition>
-      <section className="my-20">
+      <section className="my-20" id={id}>
         <h3 className="text-center text-3xl mb-2">Projects</h3>
         <p className="text-center mb-8">
           Visit my{' '}

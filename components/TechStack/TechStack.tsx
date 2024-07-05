@@ -9,12 +9,12 @@ export type dataType = {
 
 type TechStackProps = {
   title: string
-
+  id?: string
   data: dataType[]
 }
-const TechStack = ({ title, data }: TechStackProps) => {
+const TechStack = ({ title, data, id }: TechStackProps) => {
   return (
-    <section>
+    <section id={id}>
       <h3 className="text-center my-8 text-3xl font-poppins"> {title}</h3>
 
       <Wrapper>

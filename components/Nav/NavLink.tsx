@@ -9,10 +9,9 @@ type NavLinkProps = {
   index: number
   children: ReactNode
   onAction: (item: number) => void
-  select: number
 }
 
-const NavLink = ({ href, index, children, onAction, select }: NavLinkProps) => {
+const NavLink = ({ href, index, children, onAction }: NavLinkProps) => {
   return (
     <>
       <motion.div
@@ -20,14 +19,8 @@ const NavLink = ({ href, index, children, onAction, select }: NavLinkProps) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 0.5 }}
       >
-        <Link
-          href={href}
-          className={`${select === index ? 'text-gray-400' : 'hover:text-gray-400'}`}
-          onClick={() => onAction(index)}
-        >
+        <Link href={href} className="hover:text-gray-400" onClick={() => onAction(index)}>
           {children}
-
-          {select === index && <motion.div layoutId="nav" className={'w-full h-[2px] bg-gray-400'}></motion.div>}
         </Link>
       </motion.div>
     </>

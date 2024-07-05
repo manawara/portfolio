@@ -10,7 +10,6 @@ const Footer = () => {
     await copyText(text)
   }
 
-  console.log(status)
   return (
     <>
       <footer className="flex gap-4 justify-center  py-8 mt-10">
