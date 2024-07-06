@@ -7,7 +7,7 @@ export const useScrollToSection = (sections: Section[]) => {
       const sectionId = sections[index].id
       const element = document.getElementById(sectionId)
       if (element) {
-        const targetPosition = element.getBoundingClientRect().top + window.scrollY
+        const targetPosition = element.getBoundingClientRect().top
         const startPosition = window.scrollY
         const distance = targetPosition - startPosition
         const duration = 1000 // ms
