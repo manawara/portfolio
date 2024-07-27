@@ -5,20 +5,8 @@ import TechStack from '@/components/TechStack/TechStack'
 import { dataTechStack } from '@/lib/data'
 import { generateQuote } from '@/lib/helper'
 
-export type Section = {
-  id: string
-  label: string
-}
-
-export const sections: Section[] = [
-  { id: 'home', label: 'Home' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'about', label: 'About' },
-]
-
 export default function Home() {
-  const quote = generateQuote() // Poprawiona literówka
+  const quote = generateQuote()
 
   return (
     <>

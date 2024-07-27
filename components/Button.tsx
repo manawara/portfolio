@@ -1,5 +1,5 @@
 'use client'
-import React, { ComponentPropsWithoutRef, ReactNode, RefAttributes } from 'react'
+import { ComponentPropsWithoutRef, ReactNode, RefAttributes } from 'react'
 import { HTMLMotionProps, motion } from 'framer-motion'
 import { LinkProps } from 'next/link'
 import Link from 'next/link'

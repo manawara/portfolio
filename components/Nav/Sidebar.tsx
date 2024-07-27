@@ -1,6 +1,6 @@
-import React from 'react'
-import Nav from './Nav'
 import { motion } from 'framer-motion'
+import Nav from './Nav'
+
 const Sidebar = () => {
   return (
     <motion.aside

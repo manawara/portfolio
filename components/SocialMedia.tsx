@@ -1,8 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import githubIcon from '@/public/github.svg'
 import linkedinIcon from '@/public/linkedin.svg'
-import { motion } from 'framer-motion'
 import Icon from './Icon'
 const SocialMedia = () => {
   return (

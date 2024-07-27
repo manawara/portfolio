@@ -1,7 +1,7 @@
 'use client'
 import NavLink from './NavLink'
 import { useScrollToSection } from '@/hooks/useScrollToSection'
-import { sections, Section } from '@/app/page'
+import { sections, Section } from '@/lib/helper'
 
 const Nav: React.FC = () => {
   const { scrollToSection } = useScrollToSection(sections)

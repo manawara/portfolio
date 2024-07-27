@@ -8,3 +8,15 @@ export const generateQuote = () => {
 
   return quoteArr[draw]
 }
+
+export type Section = {
+  id: string
+  label: string
+}
+
+export const sections: Section[] = [
+  { id: 'home', label: 'Home' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'about', label: 'About' },
+]

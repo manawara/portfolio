@@ -2,7 +2,6 @@
 import React, { useRef } from 'react'
 import Button from '../Button'
 import Avatar from '../Avatar'
-import { generateQuote } from '@/lib/helper'
 import SectionTransition from '../SectionTransition'
 import Modal, { ModalHandle } from '../Modal'
 import QuoteComponent from '../QuoteComponent'

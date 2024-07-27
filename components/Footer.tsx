@@ -1,8 +1,8 @@
 'use client'
+import { motion, AnimatePresence } from 'framer-motion'
 import SectionTransition from './SectionTransition'
 import Button from './Button'
 import useCopyText from '@/hooks/useCopyText'
-import { motion, AnimatePresence } from 'framer-motion'
 
 const Footer = () => {
   const { status, copyText } = useCopyText()

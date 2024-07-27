@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { motion } from 'framer-motion'
 const SectionTransition = ({ children }: { children: React.ReactNode }) => {
   return (
