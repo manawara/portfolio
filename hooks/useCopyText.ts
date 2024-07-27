@@ -7,12 +7,12 @@ const useCopyText = () => {
   const copyText = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text)
-      setStatus('Tekt został skopiowany')
+      setStatus('The text has been copied')
       setTimeout(() => {
         setStatus(null)
       }, 2000)
     } catch (error) {
-      setStatus('Tekt nie został skopiowany')
+      setStatus('The text has been copied')
     }
   }
   return { status, copyText }
