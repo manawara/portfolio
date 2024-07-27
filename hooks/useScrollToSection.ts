@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { Section } from '@/app/page'
+import { Section } from '@/lib/helper'
 
 export const useScrollToSection = (sections: Section[]) => {
   const scrollToSection = useCallback(
